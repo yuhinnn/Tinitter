@@ -1,11 +1,13 @@
 <?php
-//ライブラリ読み込み
-require '../vendor/autoload.php';
-//slimの初期化
-$app = new \Slim\Slim([]);
-//slimにルートを登録
-$app->get('/',function(){
-  echo "Hello,world";
-});
-//実行
+
+//設定ファイルの読み込み
+require'../vendor/autoload.php';
+require'../config.php';
+
+$app = new \Slim\Slim([
+  'templates.path' => TEMPLATES_DIR_PATH,
+ 'view'=> new \Slim\Views\Twig(), 
+  ]);
+
+\Tinitter\Route::registration($app);
 $app->run();
