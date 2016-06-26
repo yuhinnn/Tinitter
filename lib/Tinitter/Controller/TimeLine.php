@@ -11,9 +11,9 @@ class TimeLine
     $post->save();                    //保存を実行
     $same_post = \Tinitter\Model\Post::find(1); //ID=1のデータを1件取得
     //ここまで
-    $app->render(
-      'index.twig',
-      ['display_text'=>"Hello,world!"]
-    );
+//    $app->render(
+//      'index.twig',
+//      ['display_text'=>"Hello,world!"]
+//    );
   }
 }
