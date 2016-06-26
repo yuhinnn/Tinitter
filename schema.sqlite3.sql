@@ -4,5 +4,5 @@ CREATE TABLE posts (
   nickname text NOT NULL,
   body text NOT NULL,
   created_at text NOT NULL,
-  updated_at text NOT NULL,
+  updated_at text NOT NULL
 );
