@@ -8,7 +8,7 @@ require __DIR__.'/../config.php';
 $app = new \Slim\Slim([
 
 'templates.path' => TEMPLATES_DIR_PATH,
-// 'view'=> new \Slim\Views\Twig(), 
+'view'=> new \Slim\Views\Twig(), 
   ]);
 
 \Tinitter\Route::registration($app);
