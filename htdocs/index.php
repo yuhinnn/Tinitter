@@ -11,6 +11,7 @@ $app = new \Slim\Slim([
 'view'=> new \Slim\Views\Twig(), 
   ]);
 
+$app->post('/post/commit','\Tinitter\Controller\Post:commit');
 \Tinitter\Route::registration($app);
 //データベース接続のセットアップ
 \Base\DB::registerIlluminate($db_settings);
